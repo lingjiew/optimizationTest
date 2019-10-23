@@ -1,0 +1,4 @@
+This is for conv/gemm optimization test.
+Run:
+g++ test_gemm.cpp -o demo -Ofast
+./demo
