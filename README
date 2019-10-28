@@ -1,4 +1,9 @@
 This is for conv/gemm optimization test.
 Run:
-g++ test_gemm.cpp -o demo -Ofast
+g++ test_gemm.cpp -o demo -Ofast -std=c++11 -lpthread
 ./demo
+
+gemm thread test:
+Only gemm_O5_MThread has improvement. Because the problemsize for one thread should be big enough to hide the time for create thread, destory thread and data loading.
+What's the problemsize like? Need to do more test.
+peak performance for 1024 1024 1024 0.024s
